@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react'
-// import UserHeaderSearchBar from '../dashbord/userDashbord/userHeaderSearchBar'
 import ProductCard from './helper/productCard'
 import './helper/pruductHomeCss/productHome.css'
 import { useDispatch, useSelector } from 'react-redux'
@@ -17,7 +16,6 @@ function ProductHome() {
 
     return (
         <div className=" overflow-hidden ">
-            {/* <UserHeaderSearchBar /> */}
             {isLoading ? <div className='home-product-loader p-5'>
                 <Space size="middle">
                     <Spin size="large" />

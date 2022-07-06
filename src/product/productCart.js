@@ -1,10 +1,10 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import UserHeaderSearchBar from '../dashbord/userDashbord/userHeaderSearchBar'
 import { FaPlus, FaMinus } from "react-icons/fa";
 import { AiFillDelete } from "react-icons/ai";
 import { decrementCartProductCount, incrementCartProductCount, removeItemFromCart } from '../redux/reducers/cartReducer';
 import { Empty } from 'antd';
+import { Link } from 'react-router-dom';
 
 function ProductCart() {
     const dispatch = useDispatch()
@@ -12,7 +12,7 @@ function ProductCart() {
     
     return (
         <div>
-            <UserHeaderSearchBar />{selectedCartItem.length === 0? <Empty />:
+          {selectedCartItem.length === 0? <Empty />:
             <section className="h-100" style={{ backgroundColor: '#eee' }}>
                 <div className="container h-100 py-5">
                     <div className="row d-flex justify-content-center align-items-center h-100">
@@ -61,7 +61,9 @@ function ProductCart() {
 
                             <div className="card">
                                 <div className="card-body">
-                                    <button type="button" className="btn btn-warning btn-block btn-lg">Proceed to Pay</button>
+                                   <Link to='/user/payment'>
+                                   <button type="button" className="btn btn-warning btn-block btn-lg">Proceed to Pay</button>
+                                   </Link>
                                 </div>
                             </div>
 

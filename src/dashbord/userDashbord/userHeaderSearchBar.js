@@ -3,28 +3,30 @@ import './userHeader.css'
 import { FaSearch, FaBell, FaChartLine, FaShoppingCart } from "react-icons/fa";
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import UserSignin from '../../authPages/usersignin';
 
 export default function UserHeaderSearchBar() {
     const selectedViewItem = useSelector(state => state.cart?.cartItems)
     return (
+        <>
         <div>
             <nav className="navbar navbar-expand-lg search-header ">
                 <div className="container ">
-                    <Link to='/'>
+                    <Link to='/user'>
                     <span className="navbar-brand text-white fw-bold" href="#">WebAppFashion</span>
                     </Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                        <form className="d-flex" role="search">
-                            <div class="input-group">
-                                <input type="text" class="search-input form-control rounded-0 border-0 " aria-label="Dollar amount (with dot and two decimal places)" />
-                                <span class="input-group-text bg-white rounded-0 border-0 text-primary" ><FaSearch /></span>
+                        <div className="d-flex">
+                            <div className="input-group">
+                                <input type="text" className="search-input form-control rounded-0 border-0 " aria-label="Dollar amount (with dot and two decimal places)" />
+                                <span className="input-group-text bg-white rounded-0 border-0 text-primary" ><FaSearch /></span>
                             </div>
-                            <button className="btn btn-light bg-white fw-bold rounded-0 text-primary mx-3 login-btn" type="submit">Login</button>
+                            <button className="btn btn-light bg-white fw-bold rounded-0 text-primary mx-3 login-btn" data-bs-toggle="modal" data-bs-target="#my-modal">Login</button>
 
-                        </form>
+                        </div>
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0 gap-3">
                             <li className="nav-item">
                                 <a className="nav-link active text-white fw-bold" aria-current="page" href="#">Beacome a Seller</a>
@@ -42,7 +44,7 @@ export default function UserHeaderSearchBar() {
                             </li>
                             <li className="nav-item d-flex ">
                                 <button className="btn btn-light text-white fw-bold search-header border-0 p-0 relative">
-                                    <Link to='/product/cart' className='nav-link text-white'>
+                                    <Link to='/user/product/cart' className='nav-link text-white'>
                                         <span className='mx-1'>
                                             <FaShoppingCart />
                                         </span>
@@ -57,5 +59,8 @@ export default function UserHeaderSearchBar() {
                 </div>
             </nav>
         </div>
+        <UserSignin/>
+
+        </>
     )
 }

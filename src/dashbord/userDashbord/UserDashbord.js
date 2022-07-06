@@ -8,7 +8,6 @@ import UserProductCategory from './userProductCategory'
 export default function UserdDashbord() {
   return (
     <div>
-      <UserHeaderSearchBar />
       <UserHeader />
       <UserCarosel />
       <UserProductCategory/>
