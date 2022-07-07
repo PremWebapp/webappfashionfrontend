@@ -10,17 +10,17 @@ import ProductFilterSidebar from '../product/productFilterSidebar';
 
 function UserRoute() {
     return (
-        <div>
+        <>
             <UserHeaderSearchBar/>
-            <Routes>
-                <Route exact path="/" element={<UserdDashbord />} />
-                <Route exact path="/signup" element={<UserSignup />} />
-                <Route exact path="/product" element={<ProductFilterSidebar />} />
-                <Route exact path="/product/details" element={<ProductDetails />} />
-                <Route exact path="/product/cart" element={<ProductCart />} />
-                <Route exact path="/payment" element={<PaymentPage />} />
-            </Routes>
-        </div>
+                <Routes>
+                    <Route exact path="/" element={<UserdDashbord />} />
+                    <Route exact path="/signup" element={<UserSignup />} />
+                    <Route exact path="/product" element={<ProductFilterSidebar />} />
+                    <Route exact path="/product/details" element={<ProductDetails />} />
+                    <Route exact path="/product/cart" element={<ProductCart />} />
+                    <Route exact path="/payment" element={<PaymentPage />} />
+                </Routes>
+        </>
     )
 }
 

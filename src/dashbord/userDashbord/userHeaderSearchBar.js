@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import UserSignin from '../../authPages/usersignin';
 
-export default function UserHeaderSearchBar() {
+export default function UserHeaderSearchBar({children}) {
     const selectedViewItem = useSelector(state => state.cart?.cartItems)
     return (
         <>
@@ -60,7 +60,6 @@ export default function UserHeaderSearchBar() {
             </nav>
         </div>
         <UserSignin/>
-
         </>
     )
 }
