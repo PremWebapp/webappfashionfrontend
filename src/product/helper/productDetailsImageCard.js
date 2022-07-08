@@ -35,7 +35,7 @@ function ProductDetailsImageCard() {
                 </Image.PreviewGroup>
             </div>
             <div className='d-flex gap-5 py-2'>
-                <Link to='/user/product/cart' className='nav-link'>
+                <Link to='/product/cart' className='nav-link'>
                     <Button size="large" type="primary" style={{ background: "#ff9f00", borderColor: "yellow" }} onClick={() => dispatch(addItemToCart(selectedViewItem))} icon={<ShoppingCartOutlined />}>Add to Cart</Button>
                 </Link>
                 <Button type="primary" size="large" style={{ background: "#fb641b", borderColor: "yellow" }} icon={<ShoppingOutlined />}>Buy Item</Button>

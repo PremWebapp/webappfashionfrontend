@@ -12,7 +12,8 @@ function UserRoute() {
     return (
         <>
             <UserHeaderSearchBar/>
-                <Routes>
+               <div className="usercomponent">
+               <Routes>
                     <Route exact path="/" element={<UserdDashbord />} />
                     <Route exact path="/signup" element={<UserSignup />} />
                     <Route exact path="/product" element={<ProductFilterSidebar />} />
@@ -20,6 +21,7 @@ function UserRoute() {
                     <Route exact path="/product/cart" element={<ProductCart />} />
                     <Route exact path="/payment" element={<PaymentPage />} />
                 </Routes>
+               </div>
         </>
     )
 }

@@ -4,7 +4,7 @@ import { Rate } from 'antd';
 
 function ProductCard({ children, price, image, description , count, rating}) {
     return (
-        <Link to='/user/product/details' className='nav-link   d-flex justify-content-center'>
+        <Link to='/product/details' className='nav-link   d-flex justify-content-center'>
             <div className=' relative'>
                 <div className='absolute'><Rate disabled allowHalf value={rating ?? 2.5} /></div>
                 <img className='home-product-card-img' src={image} />

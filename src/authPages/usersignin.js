@@ -40,7 +40,7 @@ function UserSignin() {
                                                 </div>
                                                 <div className="row"> <div className="col"><button type="button" style={{ width: 'inherit' }} className="btn btn-primary  btn-block"><b>SIGNUP</b></button></div></div>
                                                 <div className="row mb-4 px-3">
-                                                    <span data-bs-toggle="modal" data-bs-target="#my-modal" className="fw-bold d-flex">I have an account? <a className="text-danger "><Link className='nav-link'  to='/user/signup'>Signin</Link></a></span>
+                                                    <span data-bs-toggle="modal" data-bs-target="#my-modal" className="fw-bold d-flex">I have an account? <a className="text-danger "><Link className='nav-link'  to='/signup'>Signin</Link></a></span>
                                                 </div>
                                             </div>
                                         </div>
