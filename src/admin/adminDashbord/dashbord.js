@@ -2,7 +2,7 @@ import React from 'react'
 
 function AdminDashbord() {
   return (
-    <div>Adminn Home</div>
+    <div>Admin Home</div>
   )
 }
 

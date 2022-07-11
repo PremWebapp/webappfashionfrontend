@@ -1,9 +1,9 @@
 import React from 'react'
 import { Routes, Route, } from "react-router-dom";
-import AdminSidebar from '../dashbord/adminDashbord/helper/adminSidebar';
-import AdminDashbord from '../dashbord/adminDashbord/dashbord';
-import '../dashbord/adminDashbord/helper/admin.css'
-import AdminHeader from '../dashbord/adminDashbord/helper/adminHeader';
+import AdminSidebar from '../admin/adminDashbord/helper/adminSidebar';
+import AdminDashbord from '../admin/adminDashbord/dashbord';
+import '../admin/adminDashbord/helper/admin.css'
+import AdminHeader from '../admin/adminDashbord/helper/adminHeader';
 
 function AdminRoute() {
   return (

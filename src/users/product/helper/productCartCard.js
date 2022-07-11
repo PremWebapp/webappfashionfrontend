@@ -2,7 +2,7 @@ import React from 'react'
 import { FaPlus, FaMinus } from "react-icons/fa";
 import { AiFillDelete } from "react-icons/ai";
 import { useDispatch } from 'react-redux'
-import { decrementCartProductCount, incrementCartProductCount, removeItemFromCart  } from '../../redux/reducers/cartReducer';
+import { decrementCartProductCount, incrementCartProductCount, removeItemFromCart  } from '../../../redux/reducers/cartReducer';
 
 function ProductCartCard({ item , index}) {
     const dispatch = useDispatch()

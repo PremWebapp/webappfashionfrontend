@@ -2,7 +2,7 @@ import React from 'react'
 import { Slider, Checkbox } from 'antd';
 import { FaStar } from "react-icons/fa";
 import { useDispatch } from 'react-redux';
-import { filterProductByPrice, filterProductByRating } from '../../redux/reducers/productReducer';
+import { filterProductByPrice, filterProductByRating } from '../../../redux/reducers/productReducer';
 
 function ProductFilter() {
   const options = [

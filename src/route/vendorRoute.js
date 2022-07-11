@@ -1,25 +1,27 @@
 import React from 'react'
 import { Routes, Route, } from "react-router-dom";
-import '../dashbord/adminDashbord/helper/admin.css'
-import VendorDashbord from '../dashbord/vendorDashbord/dashbord';
-import VendorHeader from '../dashbord/vendorDashbord/helper/vendorHeader';
-import VendorSidebar from '../dashbord/vendorDashbord/helper/vendorSidebar';
+import '../admin/adminDashbord/helper/admin.css'
+import Vendorauth from '../vendor/auth/auth';
+import VendorDashbord from '../vendor/vendorDashbord/dashbord';
+import VendorHeader from '../vendor/vendorDashbord/helper/vendorHeader';
+import VendorSidebar from '../vendor/vendorDashbord/helper/vendorSidebar';
 
 function VendorRoute() {
     return (
         <>
             <VendorHeader />
-            <VendorSidebar />
+            {/* <VendorSidebar /> */}
             <div>
-                <div className="wrapper">
-                    <div className="section">
+                {/* <div className="wrapper"> */}
+                    {/* <div className="section"> */}
                         <div className="box-area">
                             <Routes>
                                 <Route exact path="/" element={<VendorDashbord />} />
+                                <Route exact path="/auth" element={<Vendorauth />} />
                             </Routes>
                         </div>
-                    </div>
-                </div>
+                    {/* </div> */}
+                {/* </div> */}
             </div>
         </>
     )

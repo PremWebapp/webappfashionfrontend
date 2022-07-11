@@ -1,12 +1,12 @@
 import React from 'react'
 import { Routes, Route, } from "react-router-dom";
 import UserSignup from '../authPages/usersignup';
-import UserdDashbord from '../dashbord/userDashbord/UserDashbord';
-import UserHeaderSearchBar from '../dashbord/userDashbord/userHeaderSearchBar';
+import UserdDashbord from '../users/userDashbord/UserDashbord';
+import UserHeaderSearchBar from '../users/userDashbord/userHeaderSearchBar';
 import PaymentPage from '../paymentSection/paymentPage';
-import ProductCart from '../product/productCart';
-import ProductDetails from '../product/productDetails';
-import ProductFilterSidebar from '../product/productFilterSidebar';
+import ProductCart from '../users/product/productCart';
+import ProductDetails from '../users/product/productDetails';
+import ProductFilterSidebar from '../users/product/productFilterSidebar';
 
 function UserRoute() {
     return (

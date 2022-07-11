@@ -3,8 +3,8 @@ import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Button } from 'antd';
 import { ShoppingCartOutlined, ShoppingOutlined } from '@ant-design/icons';
-import { addItemToCart } from '../../redux/reducers/cartReducer';
 import { Link } from 'react-router-dom';
+import { addItemToCart } from '../../../redux/reducers/cartReducer';
 
 function ProductDetailsImageCard() {
     const dispatch = useDispatch()

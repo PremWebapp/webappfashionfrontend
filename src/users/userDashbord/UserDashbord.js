@@ -6,7 +6,7 @@ import UserProductCategory from './userProductCategory'
 
 export default function UserdDashbord() {
   return (
-    <div>
+    <div className="bg-white">
       <UserHeader />
       <UserCarosel />
       <UserProductCategory/>
