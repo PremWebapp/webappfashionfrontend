@@ -4,7 +4,7 @@ import style from './vendor.module.css'
 function VendorHeader() {
   return (
     <nav className={`navbar navbar-light bg-dark fixed-top ${style.vendorHeader}`}>
-    <div className=" d-flex container">
+    <div className={`d-flex container ${style.vendorHeaderdiv}`}>
       <a className="navbar-brand text-white fw-bold">Vendor</a>
       <form className="d-flex">
         <span className='me-4 m-auto text-white'>Account status</span>

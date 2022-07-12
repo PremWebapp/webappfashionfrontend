@@ -1,39 +1,35 @@
 import React from 'react'
 import style from '../vendorDashbord/helper/vendor.module.css'
+import { Tabs } from 'antd';
+import Login from './login';
+import Register from './register';
 
 function Vendorauth() {
+    const { TabPane } = Tabs;
+
     return (
-        <div className="container  pb-5">
-            <div className={`row d-flex justify-content-center align-items-center ${style.vendorAuthBox}`}>
-                <div className="col-lg-5 col-md-5 col-10">
-                    <h3 className={`${style.vendorAuthText}`}>Sell on Pyde Ya</h3>
-                    <p className="fw-bold mb-2">Login or Create Account to Start Selling</p>
-                    <div className="pb-5">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+        <div className="container py-2 mt-5">
+            <div className="row mt-5">
+                <div className="col-md-6 col-xl-6 col-sm-6 col-12 d-flex  d-flex justify-content-center mt-5">
+                    <div className=" mb-2 mt-5">
+                        <h4>Sell on Pyde Ya</h4>
+                        <h5 className='mb-0' style={{ color: '#5A5A5A' }}>Login or Create Account to Start Selling</h5>
+                        <p className={`${style.vendorCardLable}`}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                     </div>
                 </div>
-                <div className='col-lg-5 col-md-5 '>
-                    <div className={`mt-3 mt-md-5 ${style.authCard}`}>
-                        <h6>Log in to your account</h6>
-                        <form className="pt-4">
-                            <div className="d-flex flex-column pb-3">
-                                <label for="email">Email Address</label>
-                                <input type="email" name="email" id="emailId" className="border-bottom border-primary" />
-                            </div>
-                            <div className="d-flex flex-column pb-3">
-                                <label for="password">Password</label>
-                                <input type="password" name="passwrd" id="pwd" className="border-bottom border-primary"/>
-                            </div>
-                            <div className="d-flex jusity-content-end pb-4">
-                                <div className="ml-auto">
-                                    <a href="#" className="text-danger text-decoration-none">Forgot password?</a>
-                                </div>
-                            </div>
-                            <input type="button" value="Log in" className="btn btn-primary btn-block mb-3" />
-                            <div className="register mt-5">
-                                <p>Don't have an account? <a href="#">Create an account</a></p>
-                            </div>
-                        </form>
+                <div className='mt-5 col-md-6 col-xl-6 col-sm-6 col-12'>
+                    <div className="mt-5 d-flex  d-flex justify-content-center ">
+                        <div className={`${style.vendorauthcard} pt-4`}>
+                            <Tabs defaultActiveKey="1" centered >
+                                <TabPane tab="Login" key="1">
+                                  <Login />
+                                </TabPane>
+                                <TabPane tab="Register" key="2">
+                                   <Register/>
+                                </TabPane>
+
+                            </Tabs>
+                        </div>
                     </div>
                 </div>
             </div>

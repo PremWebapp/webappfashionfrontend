@@ -63,15 +63,15 @@ label{
 .modal-content{
     width: calc(480px + 10 * ((100vw - 320px) / 680)) ;
 }
-
+/* 
 .modal {
     background-image: radial-gradient(circle 919px at 1.7% 6.1%, rgb(239, 239, 247) 0%, rgb(25 48 57) 100.2%)
-}
+} */
 
-.modal-content{
+/* .modal-content{
     background: transparent !important;
    
-}
+} */
 
 .cross{
     font-size: 25px !important;

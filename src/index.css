@@ -12,3 +12,18 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.ant-tabs > .ant-tabs-nav .ant-tabs-nav-list, .ant-tabs > div > .ant-tabs-nav .ant-tabs-nav-list {
+  column-gap: 118px !important;
+}
+ .ant-tabs-tab-btn {
+  color: #9B9B9B !important;
+  text-shadow: 0 0 0.25px currentcolor;
+  font-size: 25px !important;
+  font-weight: 600 !important;
+}
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn{
+  color: #333333 !important;
+  text-shadow: 0 0 0.25px currentcolor;
+  font-size: 25px !important;
+  font-weight: 600 !important;
+}
