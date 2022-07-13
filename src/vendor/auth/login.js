@@ -1,6 +1,6 @@
 import React from 'react'
 import style from '../vendorDashbord/helper/vendor.module.css'
-
+import {Link} from 'react-router-dom'
 function Login() {
     return (
         <>
@@ -14,9 +14,7 @@ function Login() {
                                         <div className="col-sm-8 col px-sm-0 px-4">
                                             <div>
                                                 <p className={`${style.vendorCardLable}`}>Provider Type</p>
-                                                {/* <input className={`${style.formcontrol} form-control`} type="text" name="email" placeholder="Email" /> */}
-
-                                                <select className={`${style.formcontrol} form-control bg-light`} name="cars" id="cars">
+                                                <select className={`${style.formcontrol} form-control bg-light`} >
                                                     <option value="volvo">Volvo</option>
                                                     <option value="saab">Saab</option>
                                                     <option value="mercedes">Mercedes</option>
@@ -43,11 +41,12 @@ function Login() {
                                             </div>
                                             <div className="row">
                                                 <div className="col d-flex  d-flex">
-                                                    <button type="button" className={`${style.authsubmitted} btn btn-primary  btn-block`} data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                                    <button type="button" className={`${style.authsubmitted} btn btn-primary  btn-block`} data-bs-toggle="modal" data-bs-target="#loginModel">
                                                         Login
                                                     </button>
                                                     <div className='col d-flex justify-content-end'>
-                                                        <span className='text-danger mky-auto'>Forgate Password?</span>
+                                                        
+                                                        <Link to='/vendor/password-reset' className='text-danger mky-auto'>Forgate Password?</Link>
                                                     </div>
                                                 </div>
                                             </div>
@@ -62,17 +61,16 @@ function Login() {
             </div>
 
 
-            <div className="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div className="modal-dialog">
+            <div className={`${style.modalContant} modal fade`} id="loginModel" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div className="modal-dialog ">
                     <div className="modal-content">
-                        <div className="modal-header">
-                            <h5 className="modal-title" id="exampleModalLabel">Enter OTP</h5>
+                        <div className="modal-header ">
+                            <h3 className="modal-title" id="exampleModalLabel">Enter OTP</h3>
                             <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div className="modal-body">
-                        <p>OTP Sent to registered mobile number</p>
-
-                            ...
+                            <p className={`fs-6 ${style.modelLable}`}>OTP Sent to registered mobile number</p>
+                            <input className={`${style.formcontrol} form-control shadow-none`} type="password" name="password" placeholder="Email Id/Mobile Number" />
                         </div>
                         <div className="modal-footer  d-flex justify-content-center">
                             <button type="button" className={`${style.authsubmitted} btn btn-primary`}>Submit</button>
